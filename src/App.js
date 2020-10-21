@@ -14,20 +14,27 @@ function App() {
     children: [characterContainer],
   });
 
-  async function loadCharacters() {
-    const characters = await getCharacters();
+  async function loadCharacters(name) {
+    const characters = await getCharacters(name);
     const characterElements = characters.map((character) =>
       Character({
         name: character.name,
         imgSrc: character.image,
       })
     );
-
+    characterContainer.innerHTML = "";
     characterContainer.append(...characterElements);
   }
 
+  const searchBar = createElement("input", {
+    onchange: (event) => loadCharacters(event.target.value),
+  });
+
   loadCharacters();
-  const container = createElement("div", { children: [header, main] });
+
+  const container = createElement("div", {
+    children: [header, searchBar, main],
+  });
   return container;
 }
 
