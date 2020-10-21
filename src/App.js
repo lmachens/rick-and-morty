@@ -5,10 +5,6 @@ import Header from "./components/Header";
 import { getCharacters } from "./utils/api";
 import { createElement } from "./utils/elements";
 
-function waitFor(delay) {
-  return new Promise((res) => setTimeout(res, delay));
-}
-
 function App() {
   const header = Header();
 
@@ -19,7 +15,6 @@ function App() {
   });
 
   async function loadCharacters() {
-    await waitFor(100);
     const characters = await getCharacters();
     const characterElements = characters.map((character) =>
       Character({
