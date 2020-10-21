@@ -10,7 +10,7 @@ function Search({ onchange }) {
     innerText: "🔍",
   });
 
-  const container = createElement("form", {
+  const form = createElement("form", {
     className: "search",
     children: [input, button],
     onsubmit: (event) => {
@@ -18,7 +18,7 @@ function Search({ onchange }) {
       onchange(input.value);
     },
   });
-  return container;
+  return form;
 }
 
 export default Search;
