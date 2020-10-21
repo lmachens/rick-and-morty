@@ -6,6 +6,7 @@ function App() {
   const header = Header();
 
   const main = createElement("main", {
+    className: "main",
     innerText: "👋",
   });
 

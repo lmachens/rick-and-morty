@@ -1,8 +1,8 @@
 .header {
   height: 64px;
-  display: flex;
-}
-
-.header > img {
-  height: 50px;
+  background: var(--header-bg-color);
+  color: var(--header-color);
+  text-align: center;
+  display: grid;
+  align-content: center;
 }
