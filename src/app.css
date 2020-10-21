@@ -1,14 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap");
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #eee;
+  --header-color: #202329;
+  --header-bg-color: #eee;
+  --bg-color: #24282f;
+  --font-family: "Patrick Hand SC", cursive;
+}
+
 html {
   font-size: 16px;
+  font-family: var(--font-family);
+  background: var(--bg-color);
+  color: var(--primary-color);
 }
 
 body {
   margin: 0;
-  background: darkslategray;
 }
