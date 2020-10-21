@@ -1,0 +1,23 @@
+.search {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.search > * {
+  border: 1px solid black;
+}
+
+.search > :first-child {
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.search > :last-child {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.search > input {
+  padding: 0.5rem;
+}
