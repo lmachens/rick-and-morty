@@ -1,5 +1,6 @@
 import "./app.css";
 import Character from "./components/Character";
+import Characters from "./components/Characters";
 import Header from "./components/Header";
 import { getCharacterById } from "./utils/api";
 import { createElement } from "./utils/elements";
@@ -11,15 +12,17 @@ function waitFor(delay) {
 function App() {
   const header = Header();
 
+  const characters = Characters();
   const main = createElement("main", {
     className: "main",
+    children: [characters],
   });
 
   async function getCharacters() {
     await waitFor(100);
     const firstCharacter = await getCharacterById(1);
     const secondCharacter = await getCharacterById(2);
-    main.append(
+    characters.append(
       Character({
         name: firstCharacter.name,
         imgSrc: firstCharacter.image,

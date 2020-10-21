@@ -11,6 +11,7 @@
   --header-color: #202329;
   --header-bg-color: #eee;
   --bg-color: #24282f;
+  --card-bg-color: #3c3e44;
   --font-family: "Patrick Hand SC", cursive;
 }
 
@@ -27,6 +28,4 @@ body {
 
 .main {
   padding: 30px 20px;
-  display: flex;
-  flex-wrap: wrap;
 }
