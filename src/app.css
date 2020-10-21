@@ -24,3 +24,9 @@ html {
 body {
   margin: 0;
 }
+
+.main {
+  padding: 30px 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
