@@ -11,10 +11,12 @@ function waitFor(delay) {
 function App() {
   const header = Header();
 
-  const main = createElement("main");
+  const main = createElement("main", {
+    className: "main",
+  });
 
   async function getCharacters() {
-    await waitFor(2000);
+    await waitFor(100);
     const firstCharacter = await getCharacterById(1);
     const secondCharacter = await getCharacterById(2);
     main.append(
