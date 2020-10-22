@@ -20,6 +20,7 @@ function App() {
       loadCharacters(lastName, nextPage);
     },
   });
+
   const main = createElement("main", {
     className: "main",
     children: [characterContainer, loadMoreButton],
@@ -53,6 +54,14 @@ function App() {
 
   const container = createElement("div", {
     children: [header, search, main],
+  });
+
+  window.addEventListener("scroll", () => {
+    const offsetY =
+      loadMoreButton.offsetParent.offsetHeight - window.innerHeight - 200;
+    if (offsetY < window.pageYOffset) {
+      loadMoreButton.click();
+    }
   });
   return container;
 }
