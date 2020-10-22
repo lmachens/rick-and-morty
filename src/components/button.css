@@ -1,0 +1,17 @@
+.button {
+  background: var(--header-bg-color);
+  color: var(--header-color);
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 0.5rem;
+  font-weight: bold;
+}
+
+.button:active {
+  background: var(--highlight-color);
+  color: var(--primary-color);
+}
+
+.button:disabled {
+  display: none;
+}

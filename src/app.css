@@ -13,6 +13,7 @@
   --bg-color: #24282f;
   --card-bg-color: #3c3e44;
   --font-family: "Patrick Hand SC", cursive;
+  --highlight-color: rgb(255, 123, 0);
 }
 
 html {
@@ -28,4 +29,5 @@ body {
 
 .main {
   padding: 30px 20px;
+  text-align: center;
 }
