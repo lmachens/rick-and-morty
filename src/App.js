@@ -38,6 +38,8 @@ function App() {
     nextPage = characters.info.next?.match(/\d+/)[0];
     loadMoreButton.disabled = !characters.info.next;
     lastName = name;
+    // Reappend loadMoreButton to avoid scrolling
+    main.append(loadMoreButton);
   }
 
   const search = Search({
