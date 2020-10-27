@@ -18,3 +18,16 @@
   font-size: 1.3rem;
   margin: 10px;
 }
+
+.character__header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.character__favorite {
+  background: none;
+  border: none;
+  cursor: pointer;
+}

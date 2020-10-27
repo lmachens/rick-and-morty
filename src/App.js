@@ -26,12 +26,16 @@ function App() {
     children: [characterContainer, loadMoreButton],
   });
 
-  async function loadCharacters(name, page) {
-    const characters = await getCharacters(name, page);
-    const characterElements = characters.results.map((character) =>
+  async function loadCharacters(name) {
+    const characters = await getCharacters(name);
+
+    const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+
+    const characterElements = characters.map((character) =>
       Character({
         name: character.name,
         imgSrc: character.image,
+        isFavorite: favorites.includes(character.name),
       })
     );
     characterContainer.append(...characterElements);
